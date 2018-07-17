@@ -71,6 +71,7 @@ export default class App extends Component {
                             contentStyle={{ backgroundColor: '#ddecf8' }}
                         />
                         <Button
+                            iconLeft
                             block
                             onPress={() => 
                                 ActionSheet.show(
@@ -87,6 +88,7 @@ export default class App extends Component {
                             }
                         >
                             <Text>Actionsheet</Text>
+                            <Icon name='home' />
                         </Button>
                         <Badge>
                             <Text>2</Text>
