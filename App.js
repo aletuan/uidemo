@@ -20,52 +20,82 @@ import {
     Body,
     Icon,
     Text,
-    Accordion
+    Accordion,
+    ActionSheet,
+    Root,
 } from 'native-base';
 
+var BUTTONS = ['Option 0', 'Option 1', 'Option 2', 'Delete', 'Cancel'];
+var DESTRUCTIVE_INDEX = 3;
+var CANCEL_INDEX = 4;
 
-export default class App extends Component {  
+export default class App extends Component { 
+    
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
     render() {
 
         const dataArray = [
-            { title: "First Element", content: "Lorem ipsum dolor sit amet" },
-            { title: "Second Element", content: "Lorem ipsum dolor sit amet" },
-            { title: "Third Element", content: "Lorem ipsum dolor sit amet" }
-          ];        
+            { title: 'First Element', content: 'Lorem ipsum dolor sit amet' },
+            { title: 'Second Element', content: 'Lorem ipsum dolor sit amet' },
+            { title: 'Third Element', content: 'Lorem ipsum dolor sit amet' }
+        ];        
 
         return (
-            <Container>
-                <Header>
-                    <Left>
-                        <Button transparent>
-                            <Icon name='menu' />
+            <Root>
+                <Container>
+                    <Header>
+                        <Left>
+                            <Button transparent>
+                                <Icon name='menu' />
+                            </Button>
+                        </Left>
+                        <Body>
+                            <Title>Header</Title>
+                        </Body>
+                        <Right />
+                    </Header>
+                    <Content padder>
+                        <Accordion 
+                            dataArray={dataArray} 
+                            expanded={0} 
+                            icon="add" 
+                            expandedIcon="remove" 
+                            iconStyle={{ color: 'green' }}
+                            expandedIconStyle={{ color: 'red' }}
+                            headerStyle={{ backgroundColor: '#b7daf8' }}
+                            contentStyle={{ backgroundColor: '#ddecf8' }}
+                        />
+                        <Button
+                            onPress={() => 
+                                ActionSheet.show(
+                                    {
+                                        options: BUTTONS,
+                                        cancelButtonIndex: CANCEL_INDEX,
+                                        destructiveButtonIndex: DESTRUCTIVE_INDEX,
+                                        title: 'Testing ActionSheet'
+                                    },
+                                    buttonIndex => {
+                                        this.setState({ clicked: BUTTONS[buttonIndex] });
+                                    }                                
+                                )
+                            }
+                        >
+                            <Text>Actionsheet</Text>
                         </Button>
-                    </Left>
-                    <Body>
-                        <Title>Header</Title>
-                    </Body>
-                    <Right />
-                </Header>
-                <Content padder>
-                    <Accordion 
-                        dataArray={dataArray} 
-                        expanded={0} 
-                        icon="add" 
-                        expandedIcon="remove" 
-                        iconStyle={{ color: 'green' }}
-                        expandedIconStyle={{ color: 'red' }}
-                        headerStyle={{ backgroundColor: '#b7daf8' }}
-                        contentStyle={{ backgroundColor: '#ddecf8' }}
-                    />
-                </Content>
-                <Footer>
-                    <FooterTab>
-                        <Button full>
-                            <Text>Footer</Text>
-                        </Button>
-                    </FooterTab>
-                </Footer>
-            </Container>
+                    </Content>
+                    <Footer>
+                        <FooterTab>
+                            <Button full>
+                                <Text>Footer</Text>
+                            </Button>
+                        </FooterTab>
+                    </Footer>
+                </Container>
+            </Root>
         );
     }
 }
