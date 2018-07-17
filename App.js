@@ -47,7 +47,7 @@ export default class App extends Component {
                     <Right />
                 </Header>
                 <Content padder>
-                    <Accordion dataArray={dataArray} expanded={0} />
+                    <Accordion dataArray={dataArray} expanded={0} icon="add" expandedIcon="remove" />
                 </Content>
                 <Footer>
                     <FooterTab>
