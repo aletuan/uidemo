@@ -47,7 +47,14 @@ export default class App extends Component {
                     <Right />
                 </Header>
                 <Content padder>
-                    <Accordion dataArray={dataArray} expanded={0} icon="add" expandedIcon="remove" />
+                    <Accordion 
+                        dataArray={dataArray} 
+                        expanded={0} 
+                        icon="add" 
+                        expandedIcon="remove" 
+                        iconStyle={{ color: 'green' }}
+                        expandedIconStyle={{ color: 'red' }}
+                    />
                 </Content>
                 <Footer>
                     <FooterTab>
