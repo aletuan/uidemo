@@ -71,6 +71,7 @@ export default class App extends Component {
                             contentStyle={{ backgroundColor: '#ddecf8' }}
                         />
                         <Button
+                            block
                             onPress={() => 
                                 ActionSheet.show(
                                     {
