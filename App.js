@@ -23,6 +23,7 @@ import {
     Accordion,
     ActionSheet,
     Root,
+    Badge,
 } from 'native-base';
 
 var BUTTONS = ['Option 0', 'Option 1', 'Option 2', 'Delete', 'Cancel'];
@@ -86,6 +87,15 @@ export default class App extends Component {
                         >
                             <Text>Actionsheet</Text>
                         </Button>
+                        <Badge>
+                            <Text>2</Text>
+                        </Badge>
+                        <Badge primary>
+                            <Text>2</Text>
+                        </Badge>
+                        <Badge success>
+                            <Text>2</Text>
+                        </Badge>
                     </Content>
                     <Footer>
                         <FooterTab>
