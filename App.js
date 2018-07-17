@@ -51,7 +51,7 @@ export default class App extends Component {
                     <Header>
                         <Left>
                             <Button transparent>
-                                <Icon name='menu' />
+                                <Icon name='menu' type='MaterialIcons' />
                             </Button>
                         </Left>
                         <Body>
@@ -72,7 +72,7 @@ export default class App extends Component {
                         />
                         <Button
                             iconLeft
-                            block
+                            block                            
                             onPress={() => 
                                 ActionSheet.show(
                                     {
@@ -88,7 +88,7 @@ export default class App extends Component {
                             }
                         >
                             <Text>Actionsheet</Text>
-                            <Icon name='home' />
+                            <Icon name='home' type='MaterialIcons' />
                         </Button>
                         <Badge>
                             <Text>2</Text>
