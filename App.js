@@ -26,9 +26,11 @@ import {
     Badge,
     List,
     ListItem,
+    Switch,
+    Separator,
 } from 'native-base';
 
-import { Row, Grid } from 'react-native-easy-grid';
+import { Col, Row, Grid } from 'react-native-easy-grid';
 
 var BUTTONS = ['Option 0', 'Option 1', 'Option 2', 'Delete', 'Cancel'];
 var DESTRUCTIVE_INDEX = 3;
@@ -121,23 +123,62 @@ export default class App extends Component {
                                 </Badge>
                             </Row>
                             <Row>
-                                <Button bordered rounded primary><Text> Primary </Text></Button>
-                                <Button bordered rounded success><Text> Success </Text></Button>
+                                <Col>
+                                    <Button bordered rounded primary><Text> Primary </Text></Button>
+                                </Col>
+                                <Col>
+                                    <Button bordered rounded success><Text> Success </Text></Button>
+                                </Col>
                             </Row>
-                            <Row>
-                                <List>
-                                    <ListItem selected>
-                                        <Text>Simon Mignolet</Text>
-                                    </ListItem>
-                                    <ListItem>
-                                        <Text>Nathaniel Clyne</Text>
-                                    </ListItem>
-                                    <ListItem>
-                                        <Text>Dejan Lovren</Text>
-                                    </ListItem>
-                                </List>
-                            </Row>
-                        </Grid>                       
+                        </Grid>   
+
+                        <List>
+                            <Separator bordered>
+                                <Text>Settings</Text>
+                            </Separator>                            
+                            <ListItem selected icon>
+                                <Left>
+                                    <Button style={{ backgroundColor: '#FF9501' }}>
+                                        <Icon active name='plain' type='MaterialIcons' />
+                                    </Button>
+                                </Left>
+                                <Body>
+                                    <Text>Airplain Mode</Text>
+                                </Body>
+                                <Right>
+                                    <Switch value={false} />
+                                </Right>
+                            </ListItem>
+                            <ListItem icon>
+                                <Left>
+                                    <Button style={{ backgroundColor: '#007AFF' }}>
+                                        <Icon active name="wifi" />
+                                    </Button>
+                                </Left>
+                                <Body>
+                                    <Text>Wi-Fi</Text>
+                                </Body>
+                                <Right>
+                                    <Text>GeekyAnts</Text>
+                                    <Icon active name="arrow-forward" />
+                                </Right>
+                            </ListItem>
+                            <ListItem icon>
+                                <Left>
+                                    <Button style={{ backgroundColor: '#007AFF' }}>
+                                        <Icon active name="bluetooth" />
+                                    </Button>
+                                </Left>
+                                <Body>
+                                    <Text>Bluetooth</Text>
+                                </Body>
+                                <Right>
+                                    <Text>On</Text>
+                                    <Icon active name="arrow-forward" />
+                                </Right>
+                            </ListItem>
+                        </List>
+
                     </Content>
                     <Footer>
                         <FooterTab>
