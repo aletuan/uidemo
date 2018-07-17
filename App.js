@@ -24,9 +24,11 @@ import {
     ActionSheet,
     Root,
     Badge,
+    List,
+    ListItem,
 } from 'native-base';
 
-import { Cold, Row, Grid } from 'react-native-easy-grid';
+import { Row, Grid } from 'react-native-easy-grid';
 
 var BUTTONS = ['Option 0', 'Option 1', 'Option 2', 'Delete', 'Cancel'];
 var DESTRUCTIVE_INDEX = 3;
@@ -121,6 +123,19 @@ export default class App extends Component {
                             <Row>
                                 <Button bordered rounded primary><Text> Primary </Text></Button>
                                 <Button bordered rounded success><Text> Success </Text></Button>
+                            </Row>
+                            <Row>
+                                <List>
+                                    <ListItem selected>
+                                        <Text>Simon Mignolet</Text>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Text>Nathaniel Clyne</Text>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Text>Dejan Lovren</Text>
+                                    </ListItem>
+                                </List>
                             </Row>
                         </Grid>                       
                     </Content>
