@@ -54,6 +54,8 @@ export default class App extends Component {
                         expandedIcon="remove" 
                         iconStyle={{ color: 'green' }}
                         expandedIconStyle={{ color: 'red' }}
+                        headerStyle={{ backgroundColor: '#b7daf8' }}
+                        contentStyle={{ backgroundColor: '#ddecf8' }}
                     />
                 </Content>
                 <Footer>
