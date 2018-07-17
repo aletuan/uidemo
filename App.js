@@ -19,12 +19,20 @@ import {
     Right,
     Body,
     Icon,
-    Text
+    Text,
+    Accordion
 } from 'native-base';
 
 
 export default class App extends Component {  
     render() {
+
+        const dataArray = [
+            { title: "First Element", content: "Lorem ipsum dolor sit amet" },
+            { title: "Second Element", content: "Lorem ipsum dolor sit amet" },
+            { title: "Third Element", content: "Lorem ipsum dolor sit amet" }
+          ];        
+
         return (
             <Container>
                 <Header>
@@ -38,10 +46,8 @@ export default class App extends Component {
                     </Body>
                     <Right />
                 </Header>
-                <Content>
-                    <Text>
-                        This is Content Section
-                    </Text>
+                <Content padder>
+                    <Accordion dataArray={dataArray} expanded={0} />
                 </Content>
                 <Footer>
                     <FooterTab>
