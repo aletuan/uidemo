@@ -96,13 +96,13 @@ export default class App extends Component {
                         <Badge success>
                             <Text>2</Text>
                         </Badge>
-                        <Button transparent light><Text> Light </Text></Button>
-                        <Button transparent primary><Text> Primary </Text></Button>
-                        <Button transparent success><Text> Success </Text></Button>
-                        <Button transparent info><Text> Info </Text></Button>
-                        <Button transparent warning><Text> Warning </Text></Button>
-                        <Button transparent danger><Text> Danger </Text></Button>
-                        <Button transparent dark><Text> Dark </Text></Button>                        
+                        <Button bordered light><Text> Light </Text></Button>
+                        <Button bordered primary><Text> Primary </Text></Button>
+                        <Button bordered success><Text> Success </Text></Button>
+                        <Button bordered info><Text> Info </Text></Button>
+                        <Button bordered warning><Text> Warning </Text></Button>
+                        <Button bordered danger><Text> Danger </Text></Button>
+                        <Button bordered dark><Text> Dark </Text></Button>                        
                     </Content>
                     <Footer>
                         <FooterTab>
