@@ -57,7 +57,17 @@ export default class App extends Component {
                         <Body>
                             <Title>Header</Title>
                         </Body>
-                        <Right />
+                        <Right>
+                            <Button transparent>
+                                <Icon name='search' type='MaterialIcons' />
+                            </Button>
+                            <Button transparent>
+                                <Icon name='heart' type='MaterialIcons' />
+                            </Button>
+                            <Button transparent>
+                                <Icon name='more' type='MaterialIcons' />
+                            </Button>
+                        </Right>
                     </Header>
                     <Content padder>
                         <Accordion 
